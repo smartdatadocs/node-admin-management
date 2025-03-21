@@ -4,6 +4,8 @@ const onboardRoute = require('./routes/onboard');
 const deployRoute = require('./routes/deployApi');
 const deployUiRouter = require('./routes/deployUi');
 const deployApiRouter = require('./routes/deployApiRoute');
+const deployUiRoute = require('./routes/deployUiRoute');
+
 
 
 
@@ -21,6 +23,7 @@ app.use(express.json());
 app.use('/onboard', onboardRoute);
 //app.use('/deploy', deployRoute);
 //app.use('/deploy', deployUiRouter);
+app.use('/api', deployUiRoute);
 app.use('/api', deployApiRouter);
 
 

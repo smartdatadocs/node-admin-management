@@ -13,7 +13,7 @@ router.post('/deploy/nodeapi', async (req, res) => {
         const deployResponse = await deployNodeApi(mongodbUri);
         res.status(200).json({ message: 'Node.js API deployed successfully!', output: deployResponse });
     } catch (error) {
-        console.error('Error deploying Node.js API:', error.details);
+        console.error('Error deploying Node.js API:', error);
         res.status(500).json({ error: 'Failed to deploy Node.js API', details: error.details });
     }
 });
